@@ -1,0 +1,13 @@
+# Environment variables
+.env
+
+# Cypress generated files
+cypress/screenshots/
+cypress/videos/
+cypress/reports/
+
+# Dependencies
+node_modules/
+
+# OS files
+.DS_Store
