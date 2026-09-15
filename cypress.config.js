@@ -15,11 +15,9 @@ module.exports = defineConfig({
     e2e: {
         baseUrl: 'https://opensource-demo.orangehrmlive.com',
 
-        env: {
-            apiUrl: process.env.ORANGEHRM_API_URL,
-            clientId: process.env.ORANGEHRM_CLIENT_ID,
-            clientSecret: process.env.ORANGEHRM_CLIENT_SECRET
-        },
+        pageLoadTimeout: 120000,
+        requestTimeout: 30000,
+        responseTimeout: 30000,
 
         setupNodeEvents(on, config) {
             return config;
