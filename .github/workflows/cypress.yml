@@ -11,6 +11,13 @@ jobs:
   cypress:
     runs-on: ubuntu-latest
 
+    strategy:
+      fail-fast: false
+      matrix:
+        suite:
+          - ui
+          - api
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,6 +30,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Run ${{ matrix.suite }} tests
+        run: npm run test:${{ matrix.suite }}
 
       - name: Run Cypress tests
         run: npm run cy:run
