@@ -1,11 +1,11 @@
-import ApiClient from '../../support/api/apiClient';
+import ApiClient from '../../support/api/apiClient'; 
 import DashboardPage from '../../pages/DashboardPage';
 import users from '../../fixtures/users.json';
 
 const apiClient = new ApiClient();
 const dashboardPage = new DashboardPage();
 
-describe('OrangeHRM - Employee API', () => {
+describe('OrangeHRM - Employee API', () => { //Api check
 
     before(() => {
         cy.login(
